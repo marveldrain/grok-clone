@@ -10,7 +10,7 @@ export const config = {
     fcAPI_KEY: process.env.GROQ_API_KEY,
     fcModel: 'llama-3.2-90b-vision-preview',
     // fcModel: 'llama-3.1-8b-instant',
-    useRateLimiting: true, 
+    useRateLimiting: false, 
     numberOfPagesToScan: 10,
     numberOfTweetToScan: 10,
 }
