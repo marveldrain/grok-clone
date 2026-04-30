@@ -1,13 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Force Webpack (kills Turbopack error)
   webpack: (config) => {
     return config;
   },
-  
-  // Optional: extra stability
+  // Silence Turbopack
+  turbopack: {},
   reactStrictMode: true,
-  swcMinify: true,
 };
 
-export default nextConfig;
+module.exports = nextConfig;
