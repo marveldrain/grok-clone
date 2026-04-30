@@ -1,11 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  webpack: (config) => {
-    return config;
-  },
-  // Silence Turbopack
-  turbopack: {},
-  reactStrictMode: true,
+  output: 'standalone',   // Enables standalone mode for clean start
+  webpack: (config) => config,
+  experimental: { turbopack: false },
 };
 
 module.exports = nextConfig;
