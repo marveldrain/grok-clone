@@ -2,12 +2,11 @@
   "name": "grok-clone",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
+"scripts": {
+  "dev": "next dev --webpack",
+  "build": "next build --webpack",
+  "start": "next start"
+},
   "dependencies": {
     "@ai-sdk/openai": "^0.0.72",
     "@fal-ai/client": "^1.0.4",
