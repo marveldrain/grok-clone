@@ -1,13 +1,13 @@
-const withPWA = require('next-pwa')({
-  dest: 'public',
-  register: true,
-  skipWaiting: true,
-  disable: process.env.NODE_ENV === 'development'
-})
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
+  // Force Webpack (kills Turbopack error)
+  webpack: (config) => {
+    return config;
+  },
+  
+  // Optional: extra stability
+  reactStrictMode: true,
+  swcMinify: true,
 };
 
-module.exports = withPWA(nextConfig);
+export default nextConfig;
